@@ -1,0 +1,158 @@
+/* LehighRMP Styles */
+
+.rmp-rating {
+  display: block !important;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-family: Arial, sans-serif;
+  visibility: visible !important;
+  clear: both;
+}
+
+.rmp-score {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #2E7D32;
+  background-color: #E8F5E8;
+  border: 1px solid #4CAF50;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  min-width: 35px;
+  text-align: center;
+}
+
+.rmp-score:hover {
+  background-color: #C8E6C9;
+  transform: scale(1.02);
+}
+
+/* Remove the old color classes since we're using green for all ratings */
+.rmp-good, .rmp-okay, .rmp-poor {
+  /* All ratings now use the same green styling */
+}
+
+.rmp-no-rating {
+  background-color: #F5F5F5;
+  color: #757575;
+  border-color: #BDBDBD;
+  cursor: default;
+}
+
+.rmp-no-rating:hover {
+  transform: none;
+  background-color: #F5F5F5;
+}
+
+/* Tooltip styles - non-interfering */
+.rmp-tooltip {
+  display: none;
+  position: fixed; /* Use fixed positioning to avoid layout issues */
+  bottom: auto;
+  top: auto;
+  left: auto;
+  right: auto;
+  transform: none;
+  z-index: 999999;
+  pointer-events: none; /* Don't interfere with page interactions */
+}
+
+.rmp-tooltip-content {
+  background-color: #333;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: nowrap;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  position: relative;
+  max-width: 300px;
+  white-space: normal;
+}
+
+.rmp-tooltip-content::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #333;
+}
+
+.rmp-tooltip-content div {
+  margin-bottom: 4px;
+}
+
+.rmp-tooltip-content div:last-child {
+  margin-bottom: 0;
+}
+
+.rmp-link {
+  margin-top: 8px;
+  font-style: italic;
+  color: #ccc;
+  font-size: 11px;
+}
+
+/* Banner table integration */
+table.datadisplaytable .rmp-rating {
+  margin-left: 4px;
+}
+
+td .rmp-rating {
+  white-space: nowrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .rmp-score {
+    font-size: 10px;
+    padding: 1px 4px;
+    min-width: 18px;
+  }
+  
+  .rmp-tooltip-content {
+    font-size: 11px;
+    padding: 10px;
+    max-width: 250px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .rmp-score {
+    border: 1px solid;
+  }
+  
+  .rmp-good {
+    border-color: #2E7D32;
+  }
+  
+  .rmp-okay {
+    border-color: #EF6C00;
+  }
+  
+  .rmp-poor {
+    border-color: #C62828;
+  }
+  
+  .rmp-no-rating {
+    border-color: #616161;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .rmp-score {
+    transition: none;
+  }
+  
+  .rmp-score:hover {
+    transform: none;
+  }
+}
