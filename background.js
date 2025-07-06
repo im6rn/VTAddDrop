@@ -1,4 +1,4 @@
-// LehighRMP Background Script - Adapted from WesternRMP
+//Background Script - Adapted from WesternRMP
 
 const GRAPHQL_URL = 'https://www.ratemyprofessors.com/graphql';
 const LEHIGH_SCHOOL_ID = '509'; // Lehigh University's RMP ID
