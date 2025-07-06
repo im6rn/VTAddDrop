@@ -1,4 +1,4 @@
-// LehighRMP Content Script - Adapted from WesternRMP MY CODE
+// LehighRMP Content Script - Adapted from WesternRMP
 function scanPageForProfessors() {
     // Look for instructor cells in Lehigh's Banner system
     const instructorCells = document.querySelectorAll('td[xe-field="instructor"]');
