@@ -10,6 +10,8 @@ Thanks to Uttej Mannava and Mohammad Mahfooz for the inspiration!
 
 - **Professor Ratings**: Displays professor ratings directly in Plan Ahead.
 - **Interactive Tooltips**: Hover over professor names to see detailed information, including average ratings, difficulty scores, top tags, the most helpful review, and a direct link to the professor's full profile.
+  
+Please verify all professor information before making final course selections. While I strived for accuracy, rating data may contain errors or be outdated. Users are responsible for confirming their course schedules
 
 ## Stack
 
