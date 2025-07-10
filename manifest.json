@@ -4,15 +4,11 @@
     "description": "See RateMyProfessors.com ratings in Lehigh's Plan Ahead!",
     "version": "1.0",
     "icons": { "128": "assets/icon128.png" },
-    "permissions": [
-        "activeTab"
-    ],
     "host_permissions": [
         "https://reg-prod.ec.lehigh.edu/StudentRegistrationSsb/ssb/plan/plan", 
         "https://www.ratemyprofessors.com/*",
         "https://ratemyprofessors.com/*"
     ],
-    "optional_permissions": ["webNavigation", "tabs"],
     "background": {
       "service_worker": "background.js",
       "type": "module"
@@ -24,3 +20,4 @@
       }
     ]
   }
+   
