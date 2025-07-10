@@ -35,4 +35,4 @@ The extension makes requests to RateMyProfessors.com's GraphQL API to fetch prof
 
 ## Other
 
-If you'd like to adapt this extension for use with your university's schedule builder, you'll need to change the school ID to your school's RateMyProfessor ID. This was done through Lehigh's Self-Service-Banner (SSB) system, if you use anther application such as DraftMySchedule or unique course portals I urge you to look into WesternRMP or YorkURMP respectively (both can be found on github) or adapt as you see fit.
+If you'd like to adapt this extension for use with your university's schedule builder, you'll need to change the school ID to your school's RateMyProfessor ID. This was done through Lehigh's Self-Service-Banner (SSB) system, if you use another application such as DraftMySchedule or unique course portals I urge you to look into WesternRMP or YorkURMP respectively (both can be found on github) or adapt as you see fit.
