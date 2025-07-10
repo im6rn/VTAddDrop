@@ -1,6 +1,6 @@
 # LehighPlanAheadProfessor
 
-[Chrome Web Store listing!](...)
+[Chrome Web Store listing!](https://chromewebstore.google.com/detail/lehighplanaheadprofessor/alogfakffcehkcbmjnhaakneglknpodk?utm_source=item-share-cb)
 
 Chrome extension showing Rate My Professors information in Lehigh University's Plan Ahead.
 
