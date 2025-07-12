@@ -1,6 +1,6 @@
 # VTAddDropHelper
 
-Chrome extension showing Rate My Professors information in Virginia Tech's Add/Drop system.
+Chrome extension showing Rate My Professor information in Virginia Tech's Add/Drop system.
 
 Originally made by Harrison Keen @ Lehigh University, adapted for Virginia Tech.
 
