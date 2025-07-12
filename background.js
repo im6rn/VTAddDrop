@@ -1,7 +1,7 @@
 //Background Script - Adapted from WesternRMP
 
 const GRAPHQL_URL = 'https://www.ratemyprofessors.com/graphql';
-const LEHIGH_SCHOOL_ID = '509'; // Lehigh University's RMP ID
+const SCHOOL_ID = '1349'; // VT's RMP ID
 const AUTH_TOKEN = 'Basic dGVzdDp0ZXN0';
 
 // Convert professor name format for better search results
@@ -237,7 +237,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     console.log("Background received message:", message);
     
     if (message.action === "searchProfessor") {
-        const { professorName, schoolID = encodeToBase64(LEHIGH_SCHOOL_ID), department } = message;
+        const { professorName, schoolID = encodeToBase64(SCHOOL_ID), department } = message;
         console.log(`Processing search request for: ${professorName}, department: ${department}`);
         
         if (!professorName) {
@@ -275,4 +275,4 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     return false;
 });
 
-console.log("LehighRMP Background script loaded, listening.");
+console.log("RMP Background script loaded, listening.");

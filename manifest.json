@@ -1,11 +1,11 @@
 {
     "manifest_version": 3,
-    "name": "LehighPlanAheadProfessor",
-    "description": "See RateMyProfessors.com ratings in Lehigh's Plan Ahead!",
+    "name": "VTAddDropProfessor",
+    "description": "See RateMyProfessors.com ratings in VT's Add/Drop!",
     "version": "1.0",
     "icons": { "128": "assets/icon128.png" },
     "host_permissions": [
-        "https://reg-prod.ec.lehigh.edu/StudentRegistrationSsb/ssb/plan/plan", 
+        "https://registration.es.cloud.vt.edu/StudentRegistrationSsb/ssb/*", 
         "https://www.ratemyprofessors.com/*",
         "https://ratemyprofessors.com/*"
     ],
@@ -15,7 +15,7 @@
     },
     "content_scripts": [
       {
-        "matches": ["https://reg-prod.ec.lehigh.edu/StudentRegistrationSsb/ssb/plan/plan"],
+        "matches": ["https://registration.es.cloud.vt.edu/StudentRegistrationSsb/ssb/*"],
         "js": ["content.js"]
       }
     ]

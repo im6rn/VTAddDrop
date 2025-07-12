@@ -1,6 +1,6 @@
 //Content Script - Adapted from WesternRMP
 function scanPageForProfessors() {
-    // Look for instructor cells in Lehigh's Banner system
+    // Look for instructor cells in Banner system
     const instructorCells = document.querySelectorAll('td[xe-field="instructor"]');
     console.log(`Found ${instructorCells.length} instructor cells`);
     
@@ -276,7 +276,7 @@ async function displayProfessorRating(professorCell, professorName, department) 
                 
                 // Position tooltip ABOVE the badge by default, centered on the badge
                 let left = badgeRect.left + (badgeRect.width / 2) - (tooltipWidth / 2);
-                let top = badgeRect.top - tooltipHeight - 10;
+                let top = badgeRect.top - tooltipHeight - 80; // Gap between tooltip and badge
                 
                 // Keep tooltip on screen horizontally
                 if (left < 10) left = 10;
@@ -319,6 +319,8 @@ async function displayProfessorRating(professorCell, professorName, department) 
                         z-index: -1;
                     `;
                 } else {
+                    // Tooltip is already positioned above, just configure the arrow
+                    
                     // Reset arrow to point down (default)
                     const arrow = tooltip.querySelector('.tooltip-arrow');
                     const arrowBorder = tooltip.querySelector('.tooltip-arrow-border');
@@ -399,7 +401,7 @@ function getRatingColor(rating) {
 }
 
 // Run the scanner
-console.log('LehighRMP: Starting professor scan...');
+console.log('RMP: Starting professor scan...');
 scanPageForProfessors();
 
 // Watch for dynamic content changes
@@ -422,7 +424,7 @@ const observer = new MutationObserver((mutations) => {
     });
     
     if (shouldRescan) {
-        console.log('LehighRMP: Content changed, rescanning...');
+        console.log('RMP: Content changed, rescanning...');
         setTimeout(scanPageForProfessors, 1000);
     }
 });
